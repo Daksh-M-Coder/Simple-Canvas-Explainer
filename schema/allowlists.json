@@ -1,0 +1,47 @@
+{
+  "description": "Semantic allow-lists (PRD v1.2 §7.6). Enums here must stay in sync with schema/slide_schema.json. Injected into llm/system_prompt.txt and enforced by the validator.",
+  "stickman_tags": [
+    "explaining",
+    "teaching",
+    "pointing",
+    "thinking",
+    "writing",
+    "surprised",
+    "thumbs_up",
+    "shrugging",
+    "walking_in",
+    "concluding"
+  ],
+  "zones": [
+    "top_left",
+    "top_center",
+    "top_right",
+    "mid_left",
+    "center",
+    "mid_right",
+    "bottom_left",
+    "bottom_center",
+    "bottom_right"
+  ],
+  "text_styles": [
+    "brush"
+  ],
+  "opposite_zone": {
+    "top_left": "bottom_right",
+    "top_center": "bottom_center",
+    "top_right": "bottom_left",
+    "mid_left": "mid_right",
+    "center": "bottom_center",
+    "mid_right": "mid_left",
+    "bottom_left": "top_right",
+    "bottom_center": "top_center",
+    "bottom_right": "top_left"
+  },
+  "max_text_width_ratio": {
+    "side": 0.5,
+    "top_bottom": 0.8
+  },
+  "max_stickman_width_ratio": {
+    "side": 0.4
+  }
+}

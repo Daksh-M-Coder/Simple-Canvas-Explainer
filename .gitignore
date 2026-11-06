@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets
+.env
+
+# Generated artifacts
+output/*
+!output/.gitkeep
+
+# Media assets are tracked separately (large files)
+assets/stickman/*.mp4
+!assets/stickman/.gitkeep

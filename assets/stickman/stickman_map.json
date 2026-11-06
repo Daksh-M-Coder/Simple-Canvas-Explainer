@@ -1,0 +1,35 @@
+{
+  "clips": [
+    {
+      "file": "stickman_explain.mp4",
+      "tags": ["explaining", "teaching", "pointing"],
+      "use_when": ["after_topic_intro", "mid_explanation"],
+      "description": "stickman with pointer, used for explaining"
+    },
+    {
+      "file": "stickman_think.mp4",
+      "tags": ["thinking", "surprised"],
+      "use_when": ["before_answer", "posing_question"],
+      "description": "stickman scratching head, used for questions/twists"
+    },
+    {
+      "file": "stickman_write.mp4",
+      "tags": ["writing"],
+      "use_when": ["listing_points"],
+      "description": "stickman writing on the canvas"
+    },
+    {
+      "file": "stickman_approve.mp4",
+      "tags": ["thumbs_up", "concluding"],
+      "use_when": ["summary", "final_slide"],
+      "description": "stickman nodding with thumbs up, used for conclusions"
+    },
+    {
+      "file": "stickman_entrance.mp4",
+      "tags": ["walking_in", "shrugging"],
+      "use_when": ["first_slide"],
+      "description": "stickman walks in / shrugs, used for the intro"
+    }
+  ],
+  "_note": "Clip files are placeholders until the stickman library is added under assets/stickman/ (consistent art style required, PRD §11). Validator rejects tags not present here."
+}

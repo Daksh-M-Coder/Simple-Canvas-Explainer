@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SlideDeck",
+  "description": "Grammar-constrained LLM output for Simple Canvas Explainer (PRD v1.2 §7.6). Kept simple: no anyOf/oneOf mixing, no nested $ref (guided_json/xgrammar subset).",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Short video title."
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "1-based slide index."
+          },
+          "narration": {
+            "type": "string",
+            "description": "Conversational TTS speech, 2-4 full sentences. Do NOT copy into on_screen_text."
+          },
+          "on_screen_text": {
+            "type": "string",
+            "description": "Concise canvas text using **bold**, *italic*, ~~strike~~, ==highlight==, '- ' bullets, '1. ' numbered lines, \\n newlines. Carries >=80% of narration's key info in condensed form."
+          },
+          "stickman_tag": {
+            "type": "string",
+            "enum": [
+              "explaining",
+              "teaching",
+              "pointing",
+              "thinking",
+              "writing",
+              "surprised",
+              "thumbs_up",
+              "shrugging",
+              "walking_in",
+              "concluding"
+            ]
+          },
+          "stickman_zone": {
+            "type": "string",
+            "enum": [
+              "top_left",
+              "top_center",
+              "top_right",
+              "mid_left",
+              "center",
+              "mid_right",
+              "bottom_left",
+              "bottom_center",
+              "bottom_right"
+            ]
+          },
+          "text_zone": {
+            "type": "string",
+            "enum": [
+              "top_left",
+              "top_center",
+              "top_right",
+              "mid_left",
+              "center",
+              "mid_right",
+              "bottom_left",
+              "bottom_center",
+              "bottom_right"
+            ]
+          },
+          "text_style": {
+            "type": "string",
+            "enum": ["brush"]
+          },
+          "image_query": {
+            "type": ["string", "null"],
+            "description": "Reserved for v2; always null in v1."
+          }
+        },
+        "required": [
+          "id",
+          "narration",
+          "on_screen_text",
+          "stickman_tag",
+          "stickman_zone",
+          "text_zone",
+          "text_style",
+          "image_query"
+        ]
+      }
+    }
+  },
+  "required": ["title", "slides"]
+}
